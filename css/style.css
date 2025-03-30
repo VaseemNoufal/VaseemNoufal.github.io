@@ -1,0 +1,1644 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	background: transparent;
+	font-weight: normal;
+	text-decoration: none;
+	outline: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+html{
+	scroll-behavior: smooth;
+}
+ol, ul {
+	list-style: none;
+}
+del {
+	text-decoration: line-through;
+}
+body {
+	font-family: 'kumbh_sansregular', Arial, Helvetica, sans-serif;
+	font-size: 17px;
+	color: #000;
+	overflow-x: hidden;
+	min-width: 320px;
+	font-weight: 500;
+}
+input,textarea,select{
+	font-family: 'kumbh_sansregular', Arial, Helvetica, sans-serif;
+	font-weight: 500;
+}
+:root{
+    --light-blue-color: #223e54;
+    --dark-blue-color: #022741;
+}
+@font-face {
+    font-family: 'kumbh_sansregular';
+    src: url('../fonts/kumbhsans-variablefont_yopqwght-webfont.woff2') format('woff2'),
+         url('../fonts/kumbhsans-variablefont_yopqwght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+a{
+	color: #000;
+}
+.thumb{
+	display: block;
+}
+.thumb img{
+	display: block;
+	width:100%;
+}
+p{
+	line-height:1.6em;
+	font-size: 16px;
+	font-family: 'kumbh_sansregular', Arial, Helvetica, sans-serif;
+	font-weight: 500;
+	color: #000;
+}
+.hidden{
+	display:none;
+}
+br.clear {
+	clear: both;
+	line-height: 0;
+}
+.wrapper {
+	width: 95%;
+	margin: 0 auto;
+	/* max-width:1500px; */
+}
+.flex-wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+::placeholder {
+  color: #9B9B9B;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: #9B9B9B;
+}
+
+::-ms-input-placeholder {
+  color: #9B9B9B;
+}
+h1{
+    font-family: 'kumbh_sansregular', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+span.blur{
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.8);
+    display: inline-block;
+    filter: blur(90px);
+    position: absolute;
+}
+span.blur.two{
+    width: 250px;
+    height: 250px;
+    filter: blur(200px);
+}
+/* Home Starts */
+#home{
+    background: var(--dark-blue-color);
+    min-height: 100vh;
+    padding: 30px 0;
+}
+#home header{
+    background-color: rgba(255,255,255,0.1);
+    padding: 15px 35px 15px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    width: 95%;
+    position: fixed;
+    border-radius: 40px;
+    z-index: 999;
+    backdrop-filter: blur(10px);
+}
+#home header h1.left{
+    width: 110px;
+}
+#home header h1.left a{
+    width: 100%;
+    display: block;
+}
+#home header h1.left a img{
+    width: 100%;
+    display: block;
+}
+#home header nav ul{
+    display: flex;
+    align-items: center;
+}
+#home header nav ul li{
+    margin-right: 30px;
+}
+#home header nav ul li:last-child{
+    margin-right: 0;
+}
+#home header nav.middle ul li a{
+    color: #fff;
+    font-size: 19px;
+    position: relative;
+    padding-bottom: 8px;
+}
+#home header nav.middle ul li a::before{
+    content: "";
+    height: 2px;
+    background-color: #fff;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    transition: all .5s ease;
+}
+#home header nav.middle ul li a:hover::before{
+    width: 100%;
+}
+#home header nav.right ul li a{
+    width: 25px;
+    display: block;
+}
+#home header nav.right ul li a img{
+    width: 100%;
+    display: block;
+    filter: invert(1);
+}
+#home header a.respnsive{
+    width: 30px;
+    display: none;
+}
+#home header a.respnsive img{
+    width: 100%;
+    display: block;
+    filter: invert(1);
+}
+/* Start of Spotlight Section */
+#home section.spotlight{
+    padding-top: 120px;
+    color: #fff;
+    width: 98%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+#home section.spotlight div.left{
+    width: 65%;
+}
+#home section.spotlight div.left div.line{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+#home section.spotlight div.left div.line h2{
+    font-size: 35px;
+    margin-right: 5px;
+    color: #9ca7b1;
+    font-weight: 500;
+}
+#home section.spotlight div.left div.line .ha{
+    width: 60px;
+}
+#home section.spotlight div.left>h1{
+    font-size: 78px;
+}
+#home section.spotlight div.left h1.name{
+    margin-bottom: 20px;
+    color: #9ca7b1;
+}
+#home section.spotlight div.left h1.name span{
+    font-weight: 600;
+    background: linear-gradient(to right, #6daec0, #498ac0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+#home section.spotlight div.left h1.auto-type{
+    display: inline;
+    min-width: 10px;
+}
+#home section.spotlight div.left p{
+    color: #9ca7b1;
+    font-size: 33px;
+    margin-top: 30px;
+    max-width: 90%;
+}
+span.typed-cursor{
+    font-size: 3.5em;
+}
+#home section.spotlight div.right{
+    width: 35%;
+    padding: 20px 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#home section.spotlight div.right div.container{
+    background-color: #e3d4c2;
+    width: 330px;
+    height: 330px;
+    border-radius: 20px;
+    background-image: url(../images/Vaseem-image-qualityenhanced.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    transform: rotate(-5deg);
+    position: relative;
+    transition: all 2s ease;
+    left: 0;
+    top: 0;
+    backface-visibility: hidden;
+    z-index: 10;
+}
+#about{
+    background:  linear-gradient(to bottom, var(--dark-blue-color), #173958);
+    padding: 100px 0 80px;
+}
+#about section.top{
+    text-align: center;
+}
+#about section.top span.abou{
+    color: #9ca7b1;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+#about section.top h1{
+    font-size: 60px;
+    background: linear-gradient(to right,#fff,#4e4e4e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    max-width: 50%;
+    margin: 0 auto;
+}
+#about section.top{
+    margin-bottom: 100px;
+}
+#about section.bottom{
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    margin: 0 auto;
+    flex-direction: row-reverse;
+}
+#about section.bottom div.left-container{
+    width: 37%;
+    padding-left: 30px;
+}
+#about section.bottom div.left-container img{
+    width: 90%;
+    border-radius: 40px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    transition: all .8s ease;
+}
+#about section.bottom div.left-container img:hover{
+    border-radius: 45px;
+    box-shadow: 0 8px 10px rgba(255, 255, 255, 0.3);
+    scale: 1.1;
+}
+#about section.bottom div.right-container{
+    width: 62%;
+}
+#about section.bottom div.right-container h2{
+    font-size: 42px;
+    font-weight: 700;
+    background: linear-gradient(to right, #bcbcbc, #485f74);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    text-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    margin-bottom: 30px;
+}
+#about section.bottom div.right-container h2 span{
+    font-weight: 800;
+    background: linear-gradient(to right, rgb(141, 141, 141),#fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+    0 0 20px rgba(255, 255, 255, 0.3);
+}
+#about section.bottom div.right-container p{
+    font-size: 21px;
+    font-weight: 500;
+    color: #c9c9c9;
+    max-width: 80%;
+    text-shadow: 0px 4px 10px rgba(255, 255, 255, 0.4), 
+    0px 0px 20px rgba(173, 216, 230, 0.3);
+    margin-bottom: 20px;
+    
+}
+span.blur.two-two{
+    width: 250px;
+    height: 250px;
+    filter: blur(200px);
+    position: absolute;
+    right: 30px;
+}
+#about section.bottom div.right-container>span{
+    font-weight: 800;
+    background: linear-gradient(to right, rgb(141, 141, 141),#fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+    0 0 20px rgba(255, 255, 255, 0.3);
+    font-size: 32px;
+    margin-bottom: 20px;
+    display: inline-block;
+} 
+#about section.bottom div.right-container a.button {
+    background: linear-gradient(135deg, #b6efff, #2e4f6d);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: inline-block;
+    margin-top: 15px;
+}
+#about section.bottom div.right-container a.button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(233, 250, 255, 0.3);
+}
+/* Services Section */
+#services{
+    padding: 40px 0;
+    background: linear-gradient(to bottom,#173958,#37628a);
+}
+/* Services Section */
+#services #providings section.top{
+    text-align: center;
+    margin-bottom: 40px;
+}
+#services #providings section.top span.abou{
+    color: #9ca7b1;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+#services #providings section.top h1{
+    font-size: 60px;
+    background: linear-gradient(to right,#fff,#4e4e4e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    max-width: 50%;
+    margin: 0 auto;
+}
+#services #providings section.bottom{
+    width: 97%;
+    margin: 60px auto 0;
+}
+#services #providings section.bottom ul{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#services #providings section.bottom ul li{
+    width: 49%;
+    margin-bottom: 50px;
+    padding: 60px 40px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 7px 2px rgba(255, 255, 255, 0.6);
+    transition: all 1.5s ease;
+}
+#services #providings section.bottom ul li:hover{
+    transform:  perspective(1000px) rotateX(6.69deg) rotateY(5.99deg) scale3d(1.05,1.05,1.05);
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.8),
+             0px 0px 10px rgba(173, 216, 230, 0.7),
+             0px 0px 15px rgba(135, 206, 235, 0.6);
+             text-shadow: 0px 4px 10px rgba(255, 255, 255, 0.5), 
+             0px 0px 20px rgba(173, 216, 230, 0.4);
+    background: rgba(255,255,255,.2);
+}
+#services #providings section.bottom ul li:hover a.button {
+    opacity: 1;
+}
+#services #providings section.bottom ul li div.title{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+#services #providings section.bottom ul li div.title img{
+    width: 8%;
+    display: block;
+    margin-right: 10px;
+}
+#services #providings section.bottom ul li div.title h2{
+    color: #dfdfdf;
+    font-size: 39px;
+
+}
+#services #providings section.bottom ul li div.title .svg-imgs{
+    filter: invert(1);
+}
+#services #providings section.bottom ul li p{
+    font-size: 21px;
+    color: #9ca7b1;
+    margin-bottom: 25px;
+}
+#services #providings section.bottom ul li a.button{
+    color: #fff;
+    text-decoration: underline;
+    opacity: 0;
+    transition: all 1s ease;
+}
+#services #techstack{
+    padding: 80px 0;
+}
+#services #techstack section.top {
+    text-align: center;
+    margin-bottom: 40px;
+}
+#services #techstack section.top h1{
+    font-size: 60px;
+    background: linear-gradient(to right,#fff,#4e4e4e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    max-width: 50%;
+    margin: 0 auto;
+}
+#services #techstack section.top span{
+    color: #9ca7b1;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+#services #techstack section.bottom{
+    margin-top: 80px;
+}
+#services #techstack section.bottom div.grid-container{
+    width: 60%;
+    height: 380px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: repeat(12,1fr);
+    grid-template-areas: 
+    "first first first first first first first"
+    "first first first first first first first"
+    "first first first first first first first"
+    "first first first first first first first"
+    "second third third third third third third"
+    "second third third third third third third"
+    "second third third third third third third"
+    "second third third third third third third"
+    "second four four four five five five"
+    "second four four four five five five"
+    "second four four four five five five"
+    "second four four four five five five";
+    grid-gap: 19px;
+}
+#services #techstack section.bottom div.grid-container .item{
+    border-radius: 25px;
+    padding: 10px;
+    display: flex;
+    border-radius: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 4px 3px rgba(255, 255, 255, 0.5);
+    transition: all 1s ease;
+}
+#services #techstack section.bottom div.grid-container .item:hover{
+    transform:  perspective(1000px) rotateX(6.69deg) rotateY(5.99deg) scale3d(1.05,1.05,1.05);
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.8),
+             0px 0px 10px rgba(173, 216, 230, 0.7),
+             0px 0px 15px rgba(135, 206, 235, 0.6);
+             text-shadow: 0px 4px 10px rgba(255, 255, 255, 0.5), 
+             0px 0px 20px rgba(173, 216, 230, 0.4);
+    background: rgba(255,255,255,.2);
+}
+#services #techstack section.bottom div.grid-container .item:first-child{
+    grid-area: first;
+    display: flex;
+    align-items: center;
+}
+#services #techstack section.bottom div.grid-container .item h2{
+    background: linear-gradient(to right,#fff,#c8c8c8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    font-weight: 700;
+}
+#services #techstack section.bottom div.grid-container .item:first-child img{
+    width: 90px;
+    height: 90px;
+    margin-right: 15px;
+}
+#services #techstack section.bottom div.grid-container .item:nth-child(2){
+    grid-area: second;
+    flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#services #techstack section.bottom div.grid-container .item:nth-child(2) h2{
+   
+}
+#services #techstack section.bottom div.grid-container .item:nth-child(2) img{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+#services #techstack section.bottom div.grid-container .item:nth-child(3){
+    grid-area: third;
+    display: flex;
+    align-items: center;
+}
+#services #techstack section.bottom div.grid-container .item:nth-child(3) img{
+    width: 85px;
+    height: 85px;
+    margin-right: 15px;
+}
+#services #techstack section.bottom div.grid-container .item:nth-child(4){
+    grid-area: four;
+    display: flex;
+    align-items: center;
+}
+#services #techstack section.bottom div.grid-container .item:nth-child(4) img{
+    width: 90px;
+    height: 90px;
+    margin-right: 15px;
+}
+#services #techstack section.bottom div.grid-container .item:nth-child(5){
+    grid-area: five;
+    display: flex;
+    align-items: center;
+}
+#services #techstack section.bottom div.grid-container .item:nth-child(5) img{
+    width: 90px;
+    height: 90px;
+    margin-right: 15px;
+}
+#services #techstack section.bottom div.grid-container .item img{
+    
+}
+/* Start of The Contact Section */
+#contacts{
+    padding: 60px 60px 120px 60px;
+    color: #fff;
+    background: linear-gradient(to bottom,#37628a,#214262);
+}
+#contacts section.wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+#contacts section.wrapper section.left{
+    width: 40%;
+    padding-top: 30px;
+}
+#contacts section.wrapper section.right{
+    width: 50%;
+}
+#contacts section.wrapper section.left h1{
+    font-size: 52px;
+    background: linear-gradient(to right,#fff,#4e4e4e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    max-width: 100%;
+    margin-bottom: 25px;
+}
+#contacts section.wrapper section.left p{
+    font-size: 21px;
+    color: #9ca7b1;
+}
+#contacts section.wrapper section.right div.form-container{
+    box-shadow: 0px 0px 7px 2px rgba(255, 255, 255, 0.6);
+    padding: 40px;
+    width: 85%;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+#contacts section.wrapper section.left .contact-medium{
+    margin-top: 40px;
+}
+#contacts section.wrapper section.left .contact-medium ul li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 22px;
+    position: relative;
+}
+#contacts section.wrapper section.left .contact-medium ul li img{
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    filter: invert(1);
+}
+#contacts section.wrapper section.left .contact-medium ul li::after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: rgba(255,255,255,.8);
+    display: block;
+    position: absolute;
+    filter: blur(28px);
+}
+#contacts section.wrapper section.left .contact-medium ul li a{
+    color: #b6b9bb;
+    font-size: 19px;
+    font-weight: 500;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    margin-top: 5px;
+}
+#contacts section.wrapper section.right div.form-container form h3{
+    color: #b6b9bb;
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    position: relative;
+    transition: all 1s ease;
+    margin-bottom: 30px;
+}
+#contacts section.wrapper section.right div.form-container form h3::after{
+    content: "";
+    width: 10%;
+    height: 2px;
+    background: #fff;
+    display: block;
+    position: absolute;
+    top: 36px;
+    background: #b6b9bb;
+    transition: all 1s ease;
+}
+#contacts section.wrapper section.right div.form-container form h3:hover{
+    color: #d3d3d3;
+}
+#contacts section.wrapper section.right div.form-container form h3:hover::after{
+    width: 50%;
+}
+#contacts section.wrapper section.right div.form-container form input{
+    background: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 25px;
+    backdrop-filter: blur(1px);
+    border-radius: 10px;
+    box-shadow: 0px 0px 7px 2px rgba(231, 231, 231, 0.4);
+    color: #cdcdcd;
+    font-size: 14px;
+    transition: all 1s ease;
+}
+#contacts section.wrapper section.right div.form-container form input::placeholder,#contacts section.wrapper section.right div.form-container form textarea::placeholder{
+    color: #cdcdcd;
+    font-size: 14px;
+}
+#contacts section.wrapper section.right div.form-container form textarea{
+    background: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 25px;
+    backdrop-filter: blur(1px);
+    border-radius: 10px;
+    box-shadow: 0px 0px 7px 2px rgba(231, 231, 231, 0.4);
+    color: #cdcdcd;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    height: 170px;
+    transition: all 1s ease;
+}
+#contacts section.wrapper section.right div.form-container form textarea:hover,#contacts section.wrapper section.right div.form-container form input:hover{
+    box-shadow: 0px 0px 7px 2px rgba(231, 231, 231, 0.7);
+}
+footer{
+    padding: 90px 0 30px;
+    background: linear-gradient(to bottom,#214262,#37628a);
+    border-top: 2px solid transparent;
+    border-image-source: linear-gradient(to right, transparent, #214262 50%, transparent);
+    border-image-slice: 1;
+}
+footer .footer-icons{
+    width: 20px;
+}
+footer section.top{
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    margin: 0 auto;
+}
+footer section.top div.item{
+    width: 17%;
+}
+footer section.top div.item:nth-child(2){
+    width: 13%;
+}
+footer section.top div.item.large{
+    width: 32%;
+}
+footer section.top div.item h2{
+    font-size: 35px;
+    background: linear-gradient(to right, #fff, #4e4e4e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 4px 10px rgba(255, 255, 255, 0.2),0 0 10px rgba(255, 255, 255, 0.8);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+footer section.top div.item span{
+    font-size: 18px;
+    color: #9ca7b1;
+    line-height: 1.4em;
+    max-width: 90%;
+    display: inline-block;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+footer section.top div.item.large ul{
+    display: flex;
+    align-items: center;
+}
+footer section.top div.item.large ul li{
+    margin-right: 20px;
+}
+footer section.top div.item.large ul li img{
+    width: 28px;
+    height: 28px;
+    filter: invert(1);
+    opacity: 0.9;
+}
+footer section.top div.item.large ul li:last-child{
+    margin-right: 0;
+}
+.blur.two-two-tow{
+    width: 200px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.8);
+    display: inline-block;
+    filter: blur(90px);
+    position: absolute;
+    opacity: .5;
+}
+.blur.twthr{
+    width: 200px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.8);
+    display: inline-block;
+    filter: blur(90px);
+    position: absolute;
+    right: 0;
+    opacity: .5;
+}
+footer section.top div.item h3{
+    font-size: 29px;
+    background: linear-gradient(to right, #fff, #4e4e4e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+    text-shadow: 0 4px 10px rgba(255, 255, 255, 0.2),0 0 10px rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+}
+footer section.top div.item ul li{
+    margin-bottom: 10px;
+}
+footer section.top div.item ul li a{
+    font-size: 19px;
+    color: #9ca7b1;
+    font-weight: 500;
+}
+footer section.top div.item.large.space{
+    width: 32%;
+    padding-left: 30px;
+}
+footer section.top div.item.large.space ul{
+   display: flex;
+}
+footer section.top div.item.large.space ul li{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+footer section.top div.item.large.space ul li img{
+    width: 25px;
+    opacity: 0.8;
+    margin-right: 10px;
+}
+footer section.top div.item.large.space ul li a{
+    margin-top: 5px;
+}
+footer section.top div.item.large p{
+    font-size: 25px;
+    background: linear-gradient(to right, #fff, #4e4e4e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 4px 10px rgba(255, 255, 255, 0.2),0 0 10px rgba(255, 255, 255, 0.8);
+    font-weight: 700;
+    max-width: 80%;
+    margin-top: -8px;
+    margin-bottom: 15px;
+}
+footer section.bottom{
+    text-align: center;
+    margin-top: 100px;
+}
+footer section.bottom p{
+    font-size: 18px;
+    background: linear-gradient(to right, #fff, #4e4e4e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 4px 10px rgba(255, 255, 255, 0.2),0 0 10px rgba(255, 255, 255, 0.8);
+    font-weight: 700;
+}
+#home header .drop-down{
+    position: fixed;
+    z-index: 999;
+    height: 95vh;
+    width: 400px;
+    background: #fff;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    right: 0;
+    top: 0;
+    padding: 50px;
+    background: linear-gradient(to bottom, rgba(33, 66, 98, 1), rgba(55, 98, 138, 0.9));
+    backdrop-filter: blur(100px);
+    color: #fff;
+}
+#home header .drop-down div.top{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+#home header .drop-down div.top>a{
+    width: 35px;
+    display: block;
+}
+#home header .drop-down div.top>a img{
+    width: 100%;
+    display: block;
+    filter: invert(1);
+    position: relative;
+    top: -20px;
+}
+#home header .drop-down nav.first{
+    margin-bottom: 20px;
+}
+#home header .drop-down nav.first ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+#home header .drop-down nav.first ul li{
+    margin-bottom: 25px;
+}
+#home header .drop-down nav.first ul li a{
+    color: #fff;
+    font-size: 23px;
+}
+#home header .drop-down nav.first ul li a{
+    color: #fff;
+    font-size: 23px;
+    position: relative;
+    padding-bottom: 3px;
+}
+#home header .drop-down .icosn{
+    width: 200px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+#home header .drop-down .icosn a{
+    width: 40px;
+    display: block;
+    margin-right: 30px;
+    position: relative;
+}
+#home header .drop-down .icosn a:last-child{
+    margin-right: 0;
+}
+#home header .drop-down .icosn a img{
+    width: 100%;
+    display: block;
+    filter: invert(1);
+}
+#home header .drop-down nav.second ul li img{
+    filter: invert(1);
+}
+#home header .drop-down nav.first ul li a::before{
+    content: "";
+    height: 2px;
+    background-color: #fff;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    transition: all .5s ease;
+}
+#home header .drop-down nav.first ul li a:hover::before{
+    width: 100%;
+}
+/* Responsive */
+@media all and (min-width: 1290px){
+    #home{
+        min-height: 80vh;
+    }
+    #home section.spotlight div.left h1.name{
+        font-size: 70px;
+    }  
+    #home section.spotlight div.left h1.auto-type{
+        font-size:70px;
+    }
+    #home section.spotlight div.left p{
+        font-size: 32px;
+    }
+}
+@media all and (max-width: 1280px){
+    #home section.spotlight{
+        padding-top: 170px;
+    }
+    #home section.spotlight div.left h1.name{
+        font-size: 65px;
+    }  
+    #home section.spotlight div.left h1.auto-type{
+        font-size: 65px;
+    }
+    #home section.spotlight div.left p{
+        font-size: 30px;
+    }
+    #home{
+        min-height: 70vh;
+    }
+}
+@media all and (max-width: 1175px){
+    #home{
+        min-height: 70vh;
+    }
+    #contacts{
+        padding: 40px 30px 80px 30px;;
+    }
+}
+@media all and (max-width: 1060px){
+    #services #providings section.top h1{
+        font-size: 45px;
+        max-width: 60%;
+    }
+    #about section.top h1{
+        font-size: 50px;
+    }
+    #services #techstack section.bottom div.grid-container .item h2{
+        font-size: 20px;
+    }
+    #services #techstack section.bottom div.grid-container .item:nth-child(5) img{
+        margin-right: 0;
+    }
+    #contacts section.wrapper section.left h1{
+        font-size: 42px;
+    }
+    #contacts section.wrapper section.left p{
+        font-size: 18px;
+    }
+    #contacts section.wrapper section.right{
+        width: 55%;
+    }
+    #contacts section.wrapper section.left{
+        width: 43%;
+    }
+    footer section.top div.item.large{
+        width: 60%;
+    }
+    footer section.top div.item{
+        width: 40%;
+    }
+    footer section.top div.item:nth-child(2){
+        width: 40%;
+    }
+    footer section.top div.item.large.space{
+        width: 50%;
+    }
+    footer section.top div.item{
+        margin-bottom: 30px;
+    }
+    footer section.top{
+        flex-wrap: wrap;
+    }
+    #contacts section.wrapper section.right div.form-container{
+        width: 90%;
+    }
+    footer section.bottom{
+        margin-top: 50px;
+    }
+   
+}
+@media all and (max-width: 1000px){
+   
+}
+@media all and (max-width: 996px){
+    #home section.spotlight div.left h1.name{
+        font-size: 55px;
+    }  
+    #home section.spotlight div.left h1.auto-type{
+        font-size: 55px;
+    }
+    #home section.spotlight div.left p{
+        font-size: 27px;
+    }
+}
+@media all and (max-width: 870px){
+    #services #techstack section.bottom div.grid-container .item:nth-child(5) img{
+        width: 80px;
+        height: 80px;
+    }
+    #services #techstack section.bottom div.grid-container{
+        width: 80%;
+    }
+}
+@media all and (max-width: 880px){
+    #home section.spotlight div.left h1.name{
+        font-size: 50px;
+    }  
+    #home section.spotlight div.left h1.auto-type{
+        font-size: 50px;
+    }
+    #home section.spotlight div.left p{
+        font-size: 23px;
+    }
+    #home section.spotlight div.right div.container{
+        background-size: 320px;
+    }
+    #services #techstack section.bottom div.grid-container{
+        width: 80%;
+    }
+}
+@media all and (max-width: 830px){
+    #home section.spotlight div.left h1.name{
+        font-size: 55px;
+    }  
+    #home section.spotlight div.left h1.auto-type{
+        font-size: 55px;
+    }
+    #home section.spotlight div.left p{
+        font-size: 22px;
+    }
+    #home section.spotlight div.right div.container{
+        background-size: 310px;
+    }
+    #about section.top h1{
+        font-size: 45px;
+        max-width: 70%;
+    }
+    #about section.top{
+        margin-bottom: 80px;
+    }
+    #about section.bottom div.left-container{
+        display: none;
+    }
+    #about section.bottom div.right-container{
+        width: 100%;
+    }
+    #home section.spotlight{
+        flex-wrap: wrap;
+    }
+    #home section.spotlight div.right{
+        width: 100%;
+    }
+    #home section.spotlight div.left{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    #home section.spotlight div.right div.container{
+        height: 300px;
+        width: 300px;
+    }
+    #services #providings section.bottom ul li{
+        width: 48%;
+        padding: 50px 30px;
+    }
+    #services #providings section.bottom ul li div.title h2{
+        font-size: 30px;
+    }
+    #services #techstack section.bottom div.grid-container .item:first-child img{
+        height: 80px;
+        width: 80px;
+    }
+    #services #techstack section.bottom div.grid-container .item:nth-child(2) img{
+        width: 90px;
+        height: 90px;
+    }
+    #services #techstack section.bottom div.grid-container .item:nth-child(3) img{
+        width: 75px;
+        height: 75px;
+    }
+    #services #techstack section.bottom div.grid-container .item:nth-child(4) img{
+        width: 80px;
+        height: 80px;
+        margin-right: 0;
+    }
+    #services #techstack section.bottom div.grid-container{
+        width: 80%;
+    }
+    #services #techstack section.bottom div.grid-container .item:nth-child(5) img{
+        width: 75px;
+        height: 75px;
+    }
+    #services #techstack section.bottom div.grid-container{
+        grid-template-rows: unset;
+    }
+    #services #techstack section.bottom div.grid-container .item:nth-child(4){
+        flex-direction: column;
+    }
+    #services #techstack section.bottom div.grid-container .item:nth-child(4) img{
+        margin-bottom: 10px;
+    }
+    #services #techstack section.bottom div.grid-container .item:nth-child(5) img{
+        margin-bottom: 10px;
+    }
+    #services #techstack section.bottom div.grid-container .item:nth-child(5){
+        flex-direction: column;
+    }
+    #contacts section.wrapper{
+        flex-wrap: wrap;
+    }
+    #contacts section.wrapper section.left {
+        width: 80%;
+        margin: 0 auto 30px;
+    }
+    #contacts section.wrapper section.right {
+        width: 100%;
+    }
+    #contacts section.wrapper section.right div.form-container {
+        width: 80%;
+    }
+}
+@media all and (max-width: 720px){
+    #services #providings section.top h1{
+        max-width: 70%;
+    }
+    #services #techstack section.bottom div.grid-container{
+        grid-template-rows: unset;
+    }
+    #services #techstack section.bottom div.grid-container .item:nth-child(4){
+        flex-direction: column;
+    }
+    #services #techstack section.bottom div.grid-container .item:nth-child(4) img{
+        margin-bottom: 10px;
+    }
+    #services #techstack section.bottom div.grid-container .item:nth-child(5) img{
+        margin-bottom: 10px;
+    }
+    #services #techstack section.bottom div.grid-container .item:nth-child(5){
+        flex-direction: column;
+    }
+    footer section.bottom p{
+        text-shadow: 0 4px 10px rgba(255, 255, 255, 0.5);
+    }
+    #home header nav.middle{
+        display: none;
+    }
+    #home header nav.right{
+        display: none;
+    }
+    #home header nav.right{
+        display: none;
+    }
+    #home header a.respnsive{
+        display: block;
+    }
+}
+@media all and (max-width: 634px){
+    #services #providings section.bottom{
+        width: 85%;
+    }
+    #services #providings section.bottom ul li {
+        width: 100%;
+        padding: 50px 40px;
+    }
+    #contacts section.wrapper section.right div.form-container{
+        width: 90%;
+    }
+    #contacts section.wrapper section.left{
+        width: 90%;
+    }
+    footer section.top div.item.large.space{
+        display: none;
+    }
+    #services #techstack section.bottom div.grid-container{
+        grid-template-areas:
+        "first first first first first first first"
+        "first first first first first first first"
+        "second second second second second second second"
+        "second second second second second second second"
+        "third third third third third third third"
+        "third third third third third third third"
+        "four four four four four four four"
+        "four four four four four four four"
+        "five five five five five five five"
+        "five five five five five five five"
+    }
+    #services #techstack section.bottom div.grid-container .item:nth-child(2){
+        flex-direction: row;
+    }
+    #services #techstack section.bottom div.grid-container .item:nth-child(4){
+        flex-direction: row;
+    }
+    #services #techstack section.bottom div.grid-container .item:nth-child(5){
+        flex-direction: row;
+    }
+    #services #techstack {
+        height: 900px;
+    }
+    #services #techstack section.bottom div.grid-container .item:nth-child(2) img{
+        width: 80px;
+        height: 80px;
+        margin-bottom: 0;
+    }
+    #services #techstack section.bottom div.grid-container .item:nth-child(5) img{
+        margin-bottom: 0;
+    }
+    #services #techstack section.bottom div.grid-container .item:nth-child(4) img{
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
+}
+@media all and (max-width: 550px){
+    #services #providings section.bottom{
+        width: 95%;
+    }
+    #contacts section.wrapper section.right div.form-container{
+        width: 100%;
+    } 
+    #services #providings section.top h1{
+        max-width: 82%;
+        font-size: 40px;
+    }
+    #services #techstack section.top h1{
+        font-size: 50px;
+    }
+    #services #techstack section.bottom{
+        margin-top: 0;
+    }
+}
+@media all and (max-width: 530px){
+    #home section.spotlight div.left h1.name{
+        font-size: 50px;
+    }  
+    #home section.spotlight div.left h1.auto-type{
+        font-size: 50px;
+    }
+    #home section.spotlight div.left p{
+        font-size: 20px;
+    }
+    #about section.top h1{
+        font-size: 40px;
+    }
+    footer section.top div.item.large{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    footer section.top div.item{
+        width: 45%;
+    }
+    footer section.top div.item:nth-child(2){
+        width: 45%;
+    }
+    footer section.bottom p{
+        font-size: 17px;
+    }
+}
+@media all and (max-width: 509px){
+    #about section.bottom div.right-container h2{
+        font-size: 37px;
+    }
+    #home section.spotlight {
+        padding-top: 140px;
+    }
+}
+@media all and (max-width: 480px){
+    #home section.spotlight div.left h1.name{
+        font-size: 47px;
+    }  
+    #home section.spotlight div.left h1.auto-type{
+        font-size: 47px;
+    }
+    #home section.spotlight div.left p{
+        font-size: 19px;
+    }
+    #about section.top h1{
+        font-size: 35px;
+    }
+    #about section.bottom div.right-container h2{
+        font-size: 37px;
+    }
+    #services #providings section.bottom ul li{
+        padding: 40px 30px;
+    }
+    #services #techstack section.top h1{
+        font-size: 45px;
+    }
+    #services #techstack{
+        height: 810px;
+    }
+}
+@media all and (max-width: 470px){
+    #about section.bottom div.right-container h2{
+        font-size: 34px;
+    }
+    #about section.bottom div.right-container p{
+        font-size: 20px;
+        max-width: 85%;
+    }
+    #contacts section.wrapper section.right div.form-container{
+        padding: 30px;
+    }
+}
+@media all and (max-width: 440px){
+    #home section.spotlight div.left h1.name{
+        font-size: 43px;
+    }  
+    #home section.spotlight div.left h1.auto-type{
+        font-size: 43px;
+    }
+    #home section.spotlight div.left p{
+        font-size: 18px;
+    }
+    #home section.spotlight div.right div.container{
+        height: 280px;
+        width: 280px;
+        background-size: 290px;
+    }
+    #about section.top h1{
+        font-size: 36px;
+        max-width: 81%;
+    }
+    #services #providings section.bottom ul li{
+        padding: 30px 30px;
+    }
+    #services #techstack section.top h1{
+        font-size: 40px;
+    }
+    #contacts section.wrapper section.left h1{
+        font-size: 38px;
+    }
+    #contacts{
+        padding: 40px 20px 80px 20px;
+    }
+}
+@media all and (max-width: 420px){
+    #about section.bottom div.right-container h2{
+        font-size: 32px;
+    }
+    #about section.bottom div.right-container p {
+        font-size: 19px;
+        max-width: 87%;
+    }
+    #services #providings section.top h1 {
+        max-width: 94%;
+        font-size: 36px;
+    }
+    #contacts section.wrapper section.right div.form-container {
+        padding: 30px 22px;
+    }
+}
+@media all and (max-width: 403px){
+    #home section.spotlight div.left h1.name{
+        font-size: 40px;
+    }  
+    #home section.spotlight div.left h1.auto-type{
+        font-size: 40px;
+    }
+    #home section.spotlight div.left p{
+        font-size: 18px;
+    }
+    #home section.spotlight div.right div.container {
+        height: 270px;
+        width: 270px;
+        background-size: 280px;
+    }
+    #home header .drop-down{
+        width: 380px;
+    }
+    #home header{
+        height: 80px;
+    }
+}
+@media all and (max-width: 390px){
+    #about section.bottom div.right-container h2{
+        font-size: 30px;
+    }
+    #about section.bottom div.right-container p {
+        font-size: 19px;
+        max-width: 92%;
+    }
+    #services #techstack section.bottom div.grid-container .item h2{
+        font-size: 19px;
+    }
+    footer section.top div.item:nth-child(2){
+        width: 100%;
+    }
+    footer section.top div.item{
+        width: 100%;
+    }
+    #home header .drop-down{
+        width: 370px;
+    }
+}
+@media all and (max-width: 380px){
+    #home section.spotlight div.left h1.name{
+        font-size: 37px;
+    }  
+    #home section.spotlight div.left h1.auto-type{
+        font-size: 37px;
+    }
+    #home section.spotlight div.left p{
+        font-size: 18px;
+    }
+    #home section.spotlight div.right div.container {
+        height: 260px;
+        width: 260px;
+        background-size: 270px;
+        margin-top: 20px;
+    }
+    #home section.spotlight{
+        padding-top: 140px;
+        padding-left: 10px;
+    }
+    #home section.spotlight div.left div.line{
+        margin-bottom: 10px;
+    }
+    #home section.spotlight div.left h1.name{
+        margin-bottom: 10px;
+    }
+    #about section.top h1 {
+        font-size: 34px;
+        max-width: 90%;
+    }
+    #services #techstack section.bottom div.grid-container .item h2 {
+        font-size: 18px;
+    }
+    #home header .drop-down {
+        width: 365px;
+    }
+    #services #techstack section.top h1 {
+        font-size: 35px;
+    }
+    #services #techstack section.top span{
+        font-size: 20px;
+    }
+    #home header .drop-down{
+        width: 360px;
+    }
+}
+@media all and (max-width: 369px){
+    #about section.bottom div.right-container h2 {
+        font-size: 28px;
+    }
+    #about section.bottom div.right-container p {
+        font-size: 18px;
+        max-width: 94%;
+    }
+    #services #techstack section.bottom div.grid-container .item h2{
+        font-size: 17px;
+    }
+    #home header .drop-down{
+        width: 355px;
+    }
+}
+@media all and (max-width: 356px){
+    #home section.spotlight div.left h1.name{
+        font-size: 35px;
+    }  
+    #home section.spotlight div.left h1.auto-type{
+        font-size: 34px;
+    }
+    #home section.spotlight div.left p{
+        font-size: 18px;
+    }
+    #services #providings section.bottom ul li div.title h2 {
+        font-size: 27px;
+    }
+    #home header .drop-down{
+        width: 345px;
+    }
+}
+@media all and (max-width: 340px){
+    #services #techstack section.bottom div.grid-container .item h2{
+        font-size: 15px;
+    }
+    #services #techstack section.bottom div.grid-container .item:first-child img{
+        width: 70px;
+        height: 70px;
+    }
+    #services #techstack section.bottom div.grid-container .item:nth-child(2) img{
+        width: 70px;
+        height: 70px;
+    }
+    #services #techstack section.bottom div.grid-container .item:nth-child(3) img {
+        width: 70px;
+        height: 70px;
+    }
+    #services #techstack section.bottom div.grid-container .item:nth-child(4) img {
+        width: 70px;
+        height: 70px;
+    }
+    #services #techstack {
+        height: 800px;
+    }
+    footer {
+        padding: 70px 10px 30px;
+    }
+    #about section.bottom div.right-container h2 {
+        font-size: 27px;
+    }
+    #about section.bottom div.right-container p {
+        font-size: 19px;
+        max-width: 96%;
+    }
+    #services #providings section.top h1 {
+        max-width: 99%;
+        font-size: 32px;
+    }
+    #home header{
+        height: 70px;
+    }
+    #about section.bottom div.right-container h2 {
+        font-size: 26px;
+    }
+    #services #providings section.top h1 {
+        max-width: 99%;
+        font-size: 30px;
+    }
+    #services #techstack section.top h1 {
+        font-size: 33px;
+    }
+    #home header .drop-down{
+        width: 335px;
+    }
+}
+@media all and (max-width: 337px){
+    #home section.spotlight div.left h1.name{
+        font-size: 34px;
+    }  
+    #home section.spotlight div.left h1.auto-type{
+        font-size: 33px;
+    }
+    #home section.spotlight div.left p{
+        font-size: 18px;
+    }
+    #about section.top h1 {
+        font-size: 32px;
+        max-width: 94%;
+    }
+    #home header .drop-down{
+        width: 325px;
+    }
+}
+@media all and (max-width: 328px){
+    #home section.spotlight div.left h1.name{
+        font-size: 33px;
+    }  
+    #home section.spotlight div.left h1.auto-type{
+        font-size: 31px;
+    }
+    #home section.spotlight div.left p{
+        font-size: 18px;
+    }
+    #home section.spotlight div.right div.container {
+        height: 240px;
+        width: 240px;
+        background-size: 250px;
+        margin-top: 20px;
+    }
+    #about section.top h1 {
+        font-size: 30px;
+        max-width: 94%;
+    }
+    #contacts section.wrapper section.left h1 {
+        font-size: 36px;
+    }
+    #contacts section.wrapper section.left .contact-medium ul li a {
+        color: #b6b9bb;
+        font-size: 18px;
+        font-weight: 500;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+        margin-top: 5px;
+    }
+    #contacts section.wrapper section.left p {
+        font-size: 17px;
+    }
+    footer section.bottom p {
+        font-size: 16px;
+    }
+    #home header .drop-down{
+        width: 315px;
+    }
+}
+/* The end */
