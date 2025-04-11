@@ -357,23 +357,48 @@ span.blur.two-two{
     display: inline-block;
 } 
 #about section.bottom div.right-container a.button {
-    background: linear-gradient(135deg, #b6efff, #2e4f6d);
+    background: linear-gradient(105deg, #eafaff, #002f5e);
     color: white;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
-    padding: 12px 24px;
+    padding: 14px 24px;
     border: none;
     border-radius: 30px;
     cursor: pointer;
     transition: all 0.4s ease-in-out;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
     overflow: hidden;
-    display: inline-block;
+    display: inline-flex;
     margin-top: 15px;
+    align-items: center;
+    animation: colorchange 2s infinite alternate;
+    position: relative;
+    overflow: visible;
+ }
+ @keyframes colorchange{
+    0% { 
+        color: white; 
+    }
+    25%{
+        color: #c9c9c9; 
+    }
+    50%{
+        color: #c0e0ff;
+    }
+    75%{
+        color: #dcdcdc;
+    }
+    100%{
+         color: white; 
+    }
+ }
+#about section.bottom div.right-container a.button img{
+    width: 90px;
+    margin-right: 10px;
 }
 #about section.bottom div.right-container a.button:hover {
     transform: translateY(-5px);
-    box-shadow: 0px 10px 20px rgba(233, 250, 255, 0.3);
+    box-shadow: 10px 10px 20px rgba(233, 250, 255, 0.3);
 }
 /* Services Section */
 #services{
@@ -1427,7 +1452,7 @@ footer section.bottom p{
         width: 380px;
     }
     #home header{
-        height: 80px;
+        height: 70px;
     }
 }
 @media all and (max-width: 390px){

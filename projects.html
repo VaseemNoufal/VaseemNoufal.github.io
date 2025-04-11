@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Vaseem Portfoilio</title>
+    <link rel="shortcut icon" href="images/Favicon.png" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            vertical-align: baseline;
+            background: transparent;
+            font-weight: normal;
+            text-decoration: none;
+            outline: none;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        ol, ul {
+            list-style: none;
+        }
+        del {
+            text-decoration: line-through;
+        }
+        body {
+            font-family: 'kumbh_sansregular', Arial, Helvetica, sans-serif;
+            font-size: 17px;
+            color: #000;
+            overflow-x: hidden;
+            min-width: 320px;
+            font-weight: 500;
+        }
+        input,textarea,select{
+            font-family: 'kumbh_sansregular', Arial, Helvetica, sans-serif;
+            font-weight: 500;
+        }
+        :root{
+            --light-blue-color: #223e54;
+            --dark-blue-color: #022741;
+        }
+        @font-face {
+            font-family: 'kumbh_sansregular';
+            src: url('fonts/kumbhsans-variablefont_yopqwght-webfont.woff2') format('woff2'),
+                url('fonts/kumbhsans-variablefont_yopqwght-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+
+        }
+        a{
+            color: #000;
+        }
+        .thumb{
+            display: block;
+        }
+        .thumb img{
+            display: block;
+            width:100%;
+        }
+        p{
+            line-height:1.6em;
+            font-size: 16px;
+            font-family: 'kumbh_sansregular', Arial, Helvetica, sans-serif;
+            font-weight: 500;
+            color: #000;
+        }
+        .hidden{
+            display:none;
+        }
+        br.clear {
+            clear: both;
+            line-height: 0;
+        }
+        .wrapper {
+            width: 95%;
+            margin: 0 auto;
+            /* max-width:1500px; */
+        }
+        .flex-wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+        ::placeholder {
+        color: #9B9B9B;
+        opacity: 1;
+        }
+        :-ms-input-placeholder {
+        color: #9B9B9B;
+        }
+
+        ::-ms-input-placeholder {
+        color: #9B9B9B;
+        }
+        h1{
+            font-family: 'kumbh_sansregular', Arial, Helvetica, sans-serif;
+            font-weight: 700;
+        }
+        p{
+            text-shadow: 0px 4px 10px rgba(255, 255, 255, 0.4), 0px 0px 20px rgba(173, 216, 230, 0.3);
+        }
+        /* CSS Starts */
+        .back-home{
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            right: 40px;
+            bottom: 40px;
+            background-color: rgba(255, 255, 255, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+        }
+        .back-home a{
+            width: 70%;
+            display: block;
+        }
+        .back-home a img{
+            width: 100%;
+            display: block;
+            filter: invert(1);
+        }
+        #projects{
+            background: linear-gradient(to bottom, #173958, #37628a);
+            padding: 30px 0;
+            min-height: 100vh;
+            /* position: relative; */
+            width: 100%;
+        }
+        #projects header{
+            background-color: rgba(255,255,255,0.1);
+            padding: 15px 35px 15px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 85px;
+            width: 95%;
+            position: fixed;
+            border-radius: 40px;
+            z-index: 999;
+            backdrop-filter: blur(10px);
+        }
+        #projects header h1.left{
+            width: 110px;
+        }
+        #projects header h1.left a{
+            width: 100%;
+            display: block;
+        }
+        #projects header h1.left a img{
+            width: 100%;
+            display: block;
+        }
+        #projects header nav ul{
+            display: flex;
+            align-items: center;
+        }
+        #projects header nav ul li{
+            margin-right: 30px;
+        }
+        #projects header nav ul li:last-child{
+            margin-right: 0;
+        }
+        #projects header nav.middle{
+
+        }
+        #projects header nav.right{
+
+        }
+        #projects header nav.middle ul li a{
+            color: #fff;
+            font-size: 19px;
+            position: relative;
+            padding-bottom: 8px;
+        }
+        #projects header nav.middle ul li a::before{
+            content: "";
+            height: 2px;
+            background-color: #fff;
+            width: 0;
+            position: absolute;
+            bottom: 0;
+            transition: all .5s ease;
+        }
+        #projects header nav.middle ul li a:hover::before{
+            width: 100%;
+        }
+        #projects header nav.right ul li a{
+            width: 25px;
+            display: block;
+        }
+        #projects header nav.right ul li a img{
+            width: 100%;
+            display: block;
+            filter: invert(1);
+        }
+        #projects header a.respnsive{
+            width: 30px;
+            display: none;
+        }
+        #projects header a.respnsive img{
+            width: 100%;
+            display: block;
+            filter: invert(1);
+        }
+        #projects header .drop-down{
+            position: fixed;
+            z-index: 999;
+            height: 95vh;
+            width: 400px;
+            background: #fff;
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            right: 0;
+            top: 0;
+            padding: 50px;
+            background: linear-gradient(to bottom, rgba(33, 66, 98, 1), rgba(55, 98, 138, 0.9));
+            backdrop-filter: blur(100px);
+            color: #fff;
+        }
+        #projects header .drop-down div.top{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        #projects header .drop-down div.top>a{
+            width: 35px;
+            display: block;
+        }
+        #projects header .drop-down div.top>a img{
+            width: 100%;
+            display: block;
+            filter: invert(1);
+            position: relative;
+            top: -20px;
+        }
+        #projects header .drop-down nav.first{
+            margin-bottom: 20px;
+        }
+        #projects header .drop-down nav.first ul{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+        #projects header .drop-down nav.first ul li{
+            margin-bottom: 25px;
+        }
+        #projects header .drop-down nav.first ul li a{
+            color: #fff;
+            font-size: 23px;
+        }
+        #projects header .drop-down nav.first ul li a{
+            color: #fff;
+            font-size: 23px;
+            position: relative;
+            padding-bottom: 3px;
+        }
+        #projects header .drop-down .icosn{
+            width: 200px;
+            display: flex;
+            width: 100%;
+            align-items: center;
+        }
+        #projects header .drop-down .icosn a{
+            width: 40px;
+            display: block;
+            margin-right: 30px;
+            position: relative;
+        }
+        #projects header .drop-down .icosn a:last-child{
+            margin-right: 0;
+        }
+        #projects header .drop-down .icosn a img{
+            width: 100%;
+            display: block;
+            filter: invert(1);
+        }
+        #projects header .drop-down nav.second ul li img{
+            filter: invert(1);
+        }
+        #projects header .drop-down nav.first ul li a::before{
+            content: "";
+            height: 2px;
+            background-color: #fff;
+            width: 0;
+            position: absolute;
+            bottom: 0;
+            transition: all .5s ease;
+        }
+        #projects header .drop-down nav.first ul li a:hover::before{
+            width: 100%;
+        }
+        #projects section.spotlight{
+            padding-top: 150px;
+            padding-bottom: 50px;
+        }
+        #projects section.spotlight div.content{
+            width: 90%;
+            margin: 0 auto 60px;
+            text-align: center;
+        }
+        #projects section.spotlight div.content h1.main-heading{
+            font-size: 65px;
+            /* background: linear-gradient(to right, #fff, #4e4e4e); */
+            background: linear-gradient(to right, #ffffff, #ffffff, #868686, #cccccc, #000000);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 4px 10px rgba(255, 255, 255, 0.2),0 4px 20px rgba(255, 255, 255, 0.4);
+            margin-bottom: 8px;
+            position: relative;
+        }
+        #projects section.spotlight div.content h1.main-heading::before{
+            content: "";
+            width: 100px;
+            height: 200px;
+            background: rgba(255,255,255,0.5);
+            filter: blur(100px);
+            display: block;
+            position: absolute;
+            top: 0;
+        }
+        #projects section.spotlight div.content h1.main-heading::after{
+            content: "";
+            width: 100px;
+            height: 200px;
+            background: rgba(255,255,255,0.5);
+            filter: blur(100px);
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        #projects section.spotlight div.content .label--l{
+            font-size: 13px;
+            color: #cdcdcd;
+            font-weight: 700;
+            margin-bottom: 30px;
+            display: inline-block;
+        }
+        #projects section.spotlight div.content p{
+            font-size: 20px;
+            font-weight: 500;
+            color: #c9c9c9;
+            max-width: 80%;
+            margin: 0 auto 60px;
+        }
+        #projects section.spotlight div.content p::before{
+            content: "";
+            width: 100px;
+            height: 200px;
+            background: rgba(255,255,255,0.5);
+            filter: blur(100px);
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        #projects section.spotlight div.content div.below-arrow{
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            cursor: pointer;
+        }
+        #projects section.spotlight div.content div.below-arrow img{
+            width: 52%;
+            filter: invert(1);
+        }
+        #projects section.spotlight section.main-project-section{
+            width: 90%;
+            margin: 0 auto;
+        }
+        #projects section.spotlight section.main-project-section h1{
+            font-size: 45px;
+            background: linear-gradient(to right, #9e9e9e, #d4d4d4, #dedede, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 4px 10px rgba(255, 255, 255, 0.7);
+            margin-bottom: 5px;
+        }
+        #projects section.spotlight section.main-project-section span.beauty{
+            font-size: 17px;
+            color: #cdcdcd;
+            font-weight: 700;
+            margin-bottom: 40px;
+            display: inline-block;
+        }
+        #projects section.spotlight section.main-project-section ul{
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            flex-wrap: wrap;
+        }
+        #projects section.spotlight section.main-project-section ul::before {
+            content: "";
+            width: 50%;
+            height: 50%;
+            position: absolute;
+            background-color: rgba(255, 215, 255, 0.1);
+            filter: blur(50px);
+            top: 0;
+        }
+        #projects section.spotlight section.main-project-section ul li {
+            width: 47%;
+            border-radius: 20px;
+            padding: 12px 12px 18px;
+            box-shadow: 0px 0px 7px 2px rgba(255, 255, 255, 0.6);
+            transition: all 1.5s ease;
+            margin-bottom: 30px;
+        }
+        #projects section.spotlight section.main-project-section> *{
+            margin-bottom: 50px;
+        }
+        /* Common Style */
+        #projects section.spotlight section.main-project-section ul li div.top{
+            border-radius: 17px;
+            overflow: hidden;
+            width: 100%;
+            box-shadow: 0px 0px 7px 2px rgba(255, 255, 255, 0.6);
+            transition: all 1.5s ease;
+            margin-bottom: 20px;
+        }
+        #projects section.spotlight section.main-project-section ul li div.top img{
+            width: 100%;
+            display: block;
+        }
+        /* End of Common Style */
+        #projects section.spotlight section.main-project-section .Thumbnail-section ul li div.top img{
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            width: 100%;
+        }
+        #projects section.spotlight section.main-project-section .Thumbnail-section ul li div.top{
+            background: #000;
+            border-radius: 17px;
+            overflow: hidden; 
+            width: 100%;
+        }
+        #projects section.spotlight section.main-project-section ul li h4{
+            font-size: 19px;
+            font-weight: 400;
+            color: #c9c9c9;
+            text-shadow: 0px 4px 10px rgba(255, 255, 255, 0.4), 0px 0px 20px rgba(173, 216, 230, 0.3);
+            font-weight: 700;
+            line-height: 1.3em;
+            margin-bottom: 10px;
+        }
+        #projects section.spotlight section.main-project-section ul li h4 a{
+            font-size: 19px;
+            font-weight: 400;
+            color: #c9c9c9;
+            text-shadow: 0px 4px 10px rgba(255, 255, 255, 0.4), 0px 0px 20px rgba(173, 216, 230, 0.3);
+            font-weight: 700;
+            line-height: 1.3em;
+            text-decoration: underline;
+        }
+        #projects section.spotlight section.main-project-section ul li>a{
+            color: #e4e4e4;
+            font-size: 14px;
+        }
+        #projects section.spotlight section.main-project-section .poster-section ul li{
+            width: 32%;
+        }
+        #projects section.spotlight section.main-project-section .poster-section ul li>h4{
+            height: unset;
+        }
+        /* To Change if many of li's are there */
+        #projects section.spotlight section.main-project-section .poster-section ul li:last-child{
+            margin: 0 auto;
+        }
+        /* To Change if many of li's are there */
+        #projects section.spotlight section.main-project-section section.video-section ul::before{
+            content: none;
+            width: 0;
+            height: 0;
+        }
+        #projects section.spotlight section.main-project-section section.video-section ul::after{
+            content: none;
+            width: 0;
+            height: 0;
+        }
+        #projects section.spotlight section.main-project-section section.video-section ul{
+            display: flex;
+            justify-content: center;
+        }
+        #projects section.spotlight section.main-project-section section.video-section ul li{
+            width: 31%;
+        }
+        #projects section.spotlight section.main-project-section section.video-section ul li h4{
+            height: unset;
+        }
+        #projects section.spotlight section.main-project-section section.video-section ul li div.top::after{
+            content: none;
+            width: 0;
+        }
+        #projects section.spotlight section.main-project-section section.video-section div.top-v{
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           justify-content: center;
+        }
+        /* Overlay Styles */
+        #projects section.spotlight section.main-project-section ul li div.overlay{
+            position: fixed;
+            width: 94%;
+            height: 93vh;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            backdrop-filter: blur(30px);
+            padding: 10px;
+            display: block;
+        }
+        #projects section.spotlight section.main-project-section ul li div.overlay div.left{
+            background-repeat: no-repeat;
+            width: 75%;
+            border-radius: 20px;
+            height: 100%;
+            background-image: url(images/Powerpoint\ Tutorial\ Thumbnail\ OG\ 2.jpg);
+            background-size: 100%;
+            background-position: center;
+        }
+        #projects section.spotlight section.main-project-section ul li div.overlaytwo div.left{
+            background-repeat: no-repeat;
+            width: 75%;
+            border-radius: 20px;
+            height: 100%;
+            background-image: url(images/Install\ Capcut\ Thumbnail\ og\ 3.jpg);
+            background-size: 100%;
+            background-position: center;
+        }
+        #projects section.spotlight section.main-project-section ul li div.overlay div.right{
+            height: 100%;
+            width: 24%;
+            bottom: 0;
+            right: 0;
+            border-radius: 20px;
+            position: absolute;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            padding: 20px;
+        }
+        #projects section.spotlight section.main-project-section ul li div.overlay div.right h1{
+            background: linear-gradient(to right, #d8d8d8,#fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            font-size: 40px;
+        }
+        #projects section.spotlight section.main-project-section ul li div.overlay div.right p{
+            font-size: 21px;
+            font-weight: 500;
+            color: #c9c9c9;
+            text-shadow: 0px 4px 10px rgba(255, 255, 255, 0.4), 0px 0px 20px rgba(173, 216, 230, 0.3);
+        }
+        #projects section.spotlight section.main-project-section ul li div.overlay .button-goback{
+            position: absolute;
+            display: block;
+            width: 35px;
+            height: 35px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            top: 20px;
+            left: 20px;
+        }
+        #projects section.spotlight section.main-project-section ul li div.overlay .button-goback a{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #projects section.spotlight section.main-project-section ul li div.overlay .button-goback a img{
+            width: 25px;
+            filter: invert(1);
+        }
+        /* Overlay 2 Styles */
+        #projects section.spotlight section.main-project-section ul li div.overlaytwo{
+            position: fixed;
+            width: 94%;
+            height: 93vh;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            backdrop-filter: blur(30px);
+            padding: 10px;
+            display: block;
+        }
+        #projects section.spotlight section.main-project-section ul li div.overlaytwo div.right{
+            height: 100%;
+            width: 24%;
+            bottom: 0;
+            right: 0;
+            border-radius: 20px;
+            position: absolute;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            padding: 20px;
+        }
+        #projects section.spotlight section.main-project-section ul li div.overlaytwo div.right h1{
+            background: linear-gradient(to right, #d8d8d8,#fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            font-size: 40px;
+        }
+        #projects section.spotlight section.main-project-section ul li div.overlaytwo div.right p{
+            font-size: 21px;
+            font-weight: 500;
+            color: #c9c9c9;
+            text-shadow: 0px 4px 10px rgba(255, 255, 255, 0.4), 0px 0px 20px rgba(173, 216, 230, 0.3);
+        }
+        #projects section.spotlight section.main-project-section ul li div.overlaytwo .button-goback{
+            position: absolute;
+            display: block;
+            width: 35px;
+            height: 35px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            top: 20px;
+            left: 20px;
+        }
+        #projects section.spotlight section.main-project-section ul li div.overlaytwo .button-goback a{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #projects section.spotlight section.main-project-section ul li div.overlaytwo .button-goback a img{
+            width: 25px;
+            filter: invert(1);
+        }
+        #projects section.spotlight section.main-project-section ul li div.overlay a{
+            font-size: 19px;
+            font-weight: 400;
+            color: #c9c9c9;
+            text-shadow: 0px 4px 10px rgba(255, 255, 255, 0.4), 0px 0px 20px rgba(173, 216, 230, 0.3);
+            font-weight: 700;
+            line-height: 1.3em;
+            text-decoration: underline;
+        }
+        #projects section.spotlight section.main-project-section ul li div.overlaytwo a{
+            font-size: 19px;
+            font-weight: 400;
+            color: #c9c9c9;
+            text-shadow: 0px 4px 10px rgba(255, 255, 255, 0.4), 0px 0px 20px rgba(173, 216, 230, 0.3);
+            font-weight: 700;
+            line-height: 1.3em;
+            text-decoration: underline;
+        }
+        @media all and (max-width: 1280px){
+            #projects section.spotlight section.main-project-section ul li div.overlay div.right, #projects section.spotlight section.main-project-section ul li div.overlaytwo div.right{
+                height: 28%;
+                width: 100%;
+                right: 0;
+                border-radius: 20px;
+                position: absolute;
+                background: rgba(255, 255, 255, 0.2);
+                backdrop-filter: blur(5px);
+                padding: 20px;
+                bottom: 0;
+            }
+            #projects section.spotlight section.main-project-section ul li div.overlay div.left,#projects section.spotlight section.main-project-section ul li div.overlaytwo div.left{
+                width: 80%;
+                border-radius: 20px;
+                height: 70%;
+                margin: 0 auto;
+            }
+            #projects section.spotlight section.main-project-section ul li div.overlay div.right h1, #projects section.spotlight section.main-project-section ul li div.overlaytwo div.right h1{
+                font-size: 30px;
+                margin-bottom: 10px;
+            }
+            #projects section.spotlight section.main-project-section ul li div.overlay div.right p, #projects section.spotlight section.main-project-section ul li div.overlaytwo div.right p{
+                font-size: 19px;
+            }
+        }
+        @media all and (max-width: 1000px){
+            #projects section.spotlight section.main-project-section section.video-section ul li{
+                width: 38%;
+            }
+        }
+        @media all and (max-width: 912px){
+            #projects section.spotlight section.main-project-section ul li div.overlay div.left, #projects section.spotlight section.main-project-section ul li div.overlaytwo div.left{
+                width: 90%;
+            }
+            #projects section.spotlight section.main-project-section ul li div.overlay div.right, #projects section.spotlight section.main-project-section ul li div.overlaytwo div.right{
+                height: 38%;
+            }
+        }
+        @media all and (max-width: 842px){
+            #projects section.spotlight section.main-project-section .poster-section ul li:last-child {
+                margin: 0 0 30px;
+            }
+            #projects section.spotlight section.main-project-section .poster-section ul li{
+                width: 47%;
+            }
+        }
+        @media all and (max-width: 771px){
+            #projects section.spotlight section.main-project-section section.video-section ul li {
+                width: 44%;
+            }
+            #projects section.spotlight div.content h1.main-heading{
+                font-size: 55px;
+            }
+            #projects section.spotlight section.main-project-section{
+                width: 95%;
+            }
+            #projects section.spotlight section.main-project-section .poster-section ul li{
+                width: 48%;
+            }
+            #projects section.spotlight section.main-project-section section.video-section ul li {
+                width: 48%;
+            }
+        }
+        @media all and (max-width: 745px){
+            #projects header nav.middle{
+                display: none;
+            }
+            #projects header nav.right{
+                display: none;
+            }
+            #projects header a.respnsive{
+                display: block;
+            }
+            #projects section.spotlight div.content p{
+                max-width: 90%;
+            }
+            #projects section.spotlight section.main-project-section ul li div.overlay div.left, #projects section.spotlight section.main-project-section ul li div.overlaytwo div.left{
+                width: 100%;
+            }
+        }
+        @media all and (max-width: 704px){
+            #projects section.spotlight section.main-project-section ul li h4{
+                font-size: 17px;
+            }
+            #projects section.spotlight section.main-project-section ul li h4 a{
+                font-size: 17px;
+            }
+            #projects section.spotlight div.content p{
+                margin: 0 auto 40px;
+            }
+        }
+        @media all and (max-width: 632px){
+            #projects section.spotlight section.main-project-section ul li div.overlay div.right, #projects section.spotlight section.main-project-section ul li div.overlaytwo div.right{
+                height: 45%;
+            }
+            #projects section.spotlight section.main-project-section ul li div.overlay div.right h1, #projects section.spotlight section.main-project-section ul li div.overlaytwo div.right h1{
+                font-size: 40px;
+            }
+            #projects section.spotlight section.main-project-section ul li div.overlay div.right p, #projects section.spotlight section.main-project-section ul li div.overlaytwo div.right p{
+                font-size: 22px;
+                margin-bottom: 20px;
+            }
+            #projects section.spotlight section.main-project-section ul li div.overlay a{
+                font-size: 21px;
+            }
+        }
+        @media all and (max-width: 629px){
+            #projects section.spotlight section.main-project-section ul li{
+                width: 48%;
+            }
+            #projects section.spotlight section.main-project-section section.video-section ul li {
+                width: 80%;
+            }
+        }
+        @media all and (max-width: 593px){
+            #projects section.spotlight section.main-project-section ul li{
+                width: 90%;
+            }
+            #projects section.spotlight section.main-project-section ul{
+                justify-content: center;
+            }
+            #projects section.spotlight section.main-project-section .poster-section ul li {
+                width: 80%;
+            }
+            #projects section.spotlight div.content p{
+                font-size: 19px;
+            }
+            #projects section.spotlight div.content h1.main-heading{
+                font-size: 50px;
+            }
+        }
+        
+        @media all and (max-width: 456px){
+            #projects section.spotlight section.main-project-section .poster-section ul li {
+                width: 85%;
+            }
+            #projects section.spotlight section.main-project-section section.video-section ul li {
+                width: 88%;
+            }
+            #projects section.spotlight div.content p{
+                max-width: 95%;
+            }
+            #projects section.spotlight section.main-project-section ul li{
+                width: 95%;
+            }
+            #projects section.spotlight section.main-project-section .poster-section ul li{
+                width: 90%;
+            }
+            #projects section.spotlight section.main-project-section h1{
+                font-size: 38px;
+            }
+            #projects section.spotlight section.main-project-section span.beauty{
+                margin-bottom: 30px;
+            }
+            #projects header{
+                height: 75px;
+            }
+            #projects section.spotlight section.main-project-section ul li div.overlay div.left,
+                #projects section.spotlight section.main-project-section ul li div.overlaytwo div.left{
+                background-size: 130%;
+            }
+        }
+        @media all and (max-width: 410px){
+            #projects header .drop-down{
+                width: 360px;
+            }
+        }
+        @media all and (max-width: 378px){
+            #projects header .drop-down{
+                width: 330px;
+            }
+        }
+        @media all and (max-width: 350px){
+            #projects header .drop-down{
+                width: 300px;
+            }
+            #projects section.spotlight section.main-project-section ul li div.overlay div.left,
+                #projects section.spotlight section.main-project-section ul li div.overlaytwo div.left{
+                background-size: 150%;
+            }
+        }
+        @media all and (max-width: 340px){
+            #projects section.spotlight section.main-project-section ul li{
+                width: 98%;
+            }
+            #projects section.spotlight section.main-project-section .poster-section ul li {
+                width: 95%;
+            }
+            #projects section.spotlight section.main-project-section section.video-section ul li {
+                width: 93%;
+            }
+        }
+        @media all and (max-width: 320px){
+            #projects section.spotlight section.main-project-section h1{
+                font-size: 36px;
+            }
+            #projects section.spotlight section.main-project-section span.beauty{
+                font-size: 16px;
+            }
+            #projects section.spotlight div.content h1.main-heading {
+                font-size: 45px;
+            }
+            #projects section.spotlight div.content .label--l{
+                margin-bottom: 20px;
+            }
+            #projects section.spotlight div.content p {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section id="projects">
+        <section class="wrapper">
+            <header>
+                <h1 class="left">
+                    <a href="#">
+                        <img src="images/Vaseem Portofolio Logo 1.png" alt="Logo">
+                    </a>
+                </h1>
+                <nav class="middle">
+                    <ul>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#navigation-thumnail">Thumbnails</a></li>
+                        <li><a href="#navigation-banner">Banners</a></li>
+                        <li><a href="#navigation-posterandvideo">Posters</a></li>
+                    </ul>
+                </nav>
+                <nav class="right">
+                    <ul>
+                        <li>
+                            <a href="https://github.com/VaseemNoufal" target="_blank">
+                                <img src="images/github-brands.svg" alt="social-icons" class="icon-header" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/@TechByVaseem" target="_blank">
+                                <img src="images/youtube-brands.svg" alt="social-icons" class="icon-header" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/vaseeyym__m/" target="_blank">
+                                <img src="images/instagram-brands.svg" alt="social-icons" class="icon-header" />
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="#" class="respnsive" onclick=showSidebar(event)>
+                    <img src="images/bars-solid.svg" alt="Menubar" class="icon-header-red" width="30px"/>
+                </a>
+                <div class="drop-down">
+                    <div class="top">
+                        <nav class="first">
+                            <ul>
+                                <li><a href="#projects">Projects</a></li>
+                                <li><a href="#navigation-thumnail">Thumbnails</a></li>
+                                <li><a href="#navigation-banner">Banners</a></li>
+                                <li><a href="#navigation-posterandvideo">Posters</a></li>
+                            </ul>
+                        </nav>
+                        <a href="#" onclick=hideSidebar(event)>
+                            <img src="images/xmark-solid.svg" alt="x-mark">
+                        </a>
+                    </div>
+                    <div class="icosn">
+                        <a href="https://github.com/VaseemNoufal">
+                            <img src="images/github-brands.svg" alt="">
+                        </a>
+                        <a href="https://www.youtube.com/@TechByVaseem">
+                            <img src="images/youtube-brands.svg" alt="">
+                        </a>
+                        <a href="https://www.instagram.com/vaseeyym__m/">
+                            <img src="images/instagram-brands.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </header>
+            <section class="spotlight">
+                <div class="back-home">
+                    <a href="index.html">
+                        <img src="images/house-solid.svg" alt="icon">
+                    </a>    
+                </div>
+                <div class="content">
+                    <h1 class="main-heading">Projects</h1>
+                    <span class="label--l">What I have done so Far</span>
+                    <p>Here are some of the projects I've worked on to practice and improve my skills. Each one helped me learn something new — from responsive design to creative layouts. I enjoy building clean, user-friendly interfaces and experimenting with different CSS techniques. Feel free to explore them below!</p>
+                    <div class="below-arrow">
+                        <a href="#navigation-thumnail">
+                            <img src="images/arrow-down-solid.svg" alt="icon of arrow"/>
+                        </a>    
+                    </div>
+                </div>
+                <section class="main-project-section">
+                    <section id="Thumbnail-section">
+                        <h1>Thumbnails</h1>
+                        <span class="beauty">Stunning and Clickable</span>
+                        <span id="navigation-thumnail" style="
+                        position: absolute;
+                        z-index: 1005;
+                        width: 20px;
+                        height: 20px;
+                        left: 0;
+                        display: block;
+                        /* background: #fff; */
+                        "></span>
+                        <ul>
+                            <li>
+                                <div class="top">
+                                    <img src="images/Powerpoint Tutorial Thumbnail OG 2.jpg" alt="Image of a Thumbnail"/>
+                                </div>
+                                <h4>Thumbnail for a Youtube Video named <a href="https://youtu.be/n0l3DcW7Pgk?si=emf77vVBYHkzu3JR" class="linkone" target="_balnk">"Game Tutorial in Powerpoint"</a></h4>
+                                <a href="#" onclick=crossh(event)>See More</a>
+                                <div class="overlay">
+                                    <div class="left">
+                                        <!-- <img src="images/Powerpoint Tutorial Thumbnail OG 2.jpg" alt="image"> -->
+                                    </div>
+                                    <div class="right">
+                                        <h1>Thumbnail For a Youtube Video</h1>
+                                        <p style="margin-bottom: 10px;">This Thumbnail was made for a youtube video which discusses about making a Game in Powerpoint. Made using Photoshop</p>
+                                        <a href="https://youtu.be/n0l3DcW7Pgk?si=emf77vVBYHkzu3JR" target="_blank">Click Here To Watch</a>
+                                    </div>
+                                    <div class="button-goback">
+                                        <a href="#" onclick=crossw(event)>
+                                            <img src="images/xmark-solid.svg" alt="imageof a x mark">
+                                        </a>    
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="top">
+                                    <img src="images/Install Capcut Thumbnail og 3.jpg" alt="Image of a Thumbnail">
+                                </div>
+                                <h4>Thumbnail for a Youtube Video</h4>
+                                <a href="#" onclick=crosshtwo(event)>See More</a>
+                                <div class="overlaytwo">
+                                    <div class="left">
+                                    </div>
+                                    <div class="right">
+                                        <h1>Thumbnail For a Youtube Video</h1>
+                                        <p>This Thumbnail was made for a youtube video</p>
+                                        <p>Made using Photoshop</p>
+                                    </div>
+                                    <div class="button-goback">
+                                        <a href="#" onclick=crosswtwo(event)>
+                                            <img src="images/xmark-solid.svg" alt="imageof a x mark">
+                                        </a>    
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="banner-section">
+                        <h1>Banner Section</h1>
+                        <span class="beauty">Creating Attractive Banners</span>
+                        <span id="navigation-banner" style="
+                        position: absolute;
+                        z-index: 1005;
+                        width: 20px;
+                        height: 20px;
+                        left: 0;
+                        display: block;
+                        /* background: #fff; */
+                        "></span>
+                        <ul>
+                            <li>
+                                <div class="top">
+                                    <img src="images/Achikka Youtube Banner 16 Very Last.png" alt="Image of a Youtube Banner">
+                                </div>
+                                <h4>Designed a Youtube Banner for a Sports Coaching Channel. To Watch <a href="https://www.youtube.com/@arshadbkunnummal">Click Here</a></h4>
+                            </li>
+                            <li>
+                                <div class="top">
+                                    <img src="images/YT Banner Code Craft Craze og 1.jpg" alt="Image of a Youtube Banner">
+                                </div>
+                                <h4>Designed a Youtube Banner for a Editing and Technology Channel. To Watch <a href="https://www.youtube.com/@TechByVaseem">Click Here</a></h4>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="poster-section">
+                        <h1>Digital Posters</h1>
+                        <span class="beauty">Posters that are Creative</span>
+                        <span id="navigation-posterandvideo" style="
+                        position: absolute;
+                        z-index: 1005;
+                        width: 20px;
+                        height: 20px;
+                        left: 0;
+                        display: block;
+                        /* background: #fff; */
+                        "></span>
+                        <ul>
+                            <li>
+                                <div class="top">
+                                    <img src="images/Portfolio-poster.png" alt="Poster-image">
+                                </div>
+                                <h4>Poster for my Portfolio Website</h4>
+                            </li>
+                            <li>
+                                <div class="top">
+                                    <img src="images/eid-ul-adha-2.png" alt="Poster-image">
+                                </div>
+                                <h4>Designed a Eid ul Fitr Poster for a Construction Company</h4>
+                            </li>
+                            <li>
+                                <div class="top">
+                                    <img src="images/Ishan-crying-3.png" alt="Poster-image" style="filter: blur(1px);">
+                                </div>
+                                <h4>Designed some personal poster like this Class Photo Remake</h4>
+                            </li>
+                            <li>
+                                <div class="top">
+                                    <img src="images/new-yearposter.jpg" alt="Poster-image">
+                                </div>
+                                <h4>Designed a New Year Poster for a Construction Company</h4>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="video-section">
+                        <div class="top-v">
+                            <h1>Video Editing</h1>
+                            <span class="beauty">Just a Beginner Video Editor</span>
+                        </div>
+                        <ul>
+                            <li>
+                                <div class="top">
+                                    <img src="images/ch-centre-video.jpg" alt="image of a poster" width="50%"/>
+                                </div>
+                                <h4>Edited a Construction Video for a Client. For the <a href="https://www.instagram.com/reel/DH_lHTCyXYK/?next=%2F" target="_blank">Click here</a></h4>
+                                <a href="https://www.instagram.com/reel/DH_lHTCyXYK/?next=%2F" target="_blank">See More</a>
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>
+    <script>
+        function crossh(event) {
+            event.preventDefault();
+            const sidebar = document.querySelector('.overlay');
+            sidebar.style.display = 'block';
+        }
+
+        function crossw(event) {
+            event.preventDefault();
+            const sidebar = document.querySelector('.overlay');
+            sidebar.style.display = 'none';
+        }
+      </script>
+      <script>
+        function crosshtwo(event) {
+            event.preventDefault();
+            const sidebar = document.querySelector('.overlaytwo');
+            sidebar.style.display = 'block';
+        }
+
+        function crosswtwo(event) {
+            event.preventDefault();
+            const sidebar = document.querySelector('.overlaytwo');
+            sidebar.style.display = 'none';
+        }
+      </script>
+      <script>
+        window.addEventListener('DOMContentLoaded', () => {
+          const overlay1 = document.querySelector('.overlay');
+          const overlay2 = document.querySelector('.overlaytwo');
+      
+          if (overlay1) overlay1.style.display = 'none';
+          if (overlay2) overlay2.style.display = 'none';
+        });
+      </script>      
+      <script>
+        function showSidebar(event) {
+            event.preventDefault();
+            const sidebar = document.querySelector('.drop-down');
+            sidebar.style.display = 'flex';
+        }
+
+        function hideSidebar(event) {
+            event.preventDefault();
+            const sidebar = document.querySelector('.drop-down');
+            sidebar.style.display = 'none';
+        }
+      </script>
+</body>
+</html>
