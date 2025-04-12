@@ -1351,6 +1351,11 @@ footer section.bottom p{
         margin-top: 0;
     }
 }
+@media all and (max-width: 520px){
+    #about section.bottom div.right-container h2{
+        font-size: 35px;
+    }
+}
 @media all and (max-width: 530px){
     #home section.spotlight div.left h1.name{
         font-size: 50px;
@@ -1473,11 +1478,11 @@ footer section.bottom p{
     #about section.bottom div.right-container a.button img{
         width: 60px;
     }
+    #about section.bottom div.right-container h2{
+        font-size: 31px;
+    }
 }
 @media all and (max-width: 420px){
-    #about section.bottom div.right-container h2{
-        font-size: 32px;
-    }
     #about section.bottom div.right-container p {
         font-size: 19px;
         max-width: 87%;
@@ -1518,10 +1523,12 @@ footer section.bottom p{
         height: 70px;
     }
 }
-@media all and (max-width: 390px){
+@media all and (max-width: 393px){
     #about section.bottom div.right-container h2{
-        font-size: 30px;
+        font-size: 29px;
     }
+}
+@media all and (max-width: 390px){
     #about section.bottom div.right-container p {
         font-size: 19px;
         max-width: 92%;
@@ -1601,7 +1608,7 @@ footer section.bottom p{
 }
 @media all and (max-width: 369px){
     #about section.bottom div.right-container h2 {
-        font-size: 28px;
+        font-size: 27px;
     }
     #about section.bottom div.right-container p {
         font-size: 18px;
@@ -1643,10 +1650,12 @@ footer section.bottom p{
         width: 55px;
     }
 }
-@media all and (max-width: 340px){
+@media all and (max-width: 343px){
     #services #techstack section.bottom div.grid-container .item h2{
         font-size: 15px;
     }
+}
+@media all and (max-width: 340px){
     #services #techstack section.bottom div.grid-container .item:first-child img{
         width: 70px;
         height: 70px;
