@@ -1351,6 +1351,11 @@ footer section.bottom p{
         margin-top: 0;
     }
 }
+@media all and (max-width: 530px){
+    #about section.bottom div.right-container h2{
+        font-size: 33px;
+    }
+}
 @media all and (max-width: 520px){
     #about section.bottom div.right-container h2{
         font-size: 35px;
@@ -1648,6 +1653,11 @@ footer section.bottom p{
     }
     #about section.bottom div.right-container a.button img{
         width: 55px;
+    }
+}
+@media all and (max-width: 346px){
+    #about section.bottom div.right-container h2 {
+        font-size: 26px;
     }
 }
 @media all and (max-width: 343px){
