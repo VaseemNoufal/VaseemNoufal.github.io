@@ -207,7 +207,34 @@ span.blur.two{
 }
 #home section.spotlight div.left div.line .ha{
     width: 60px;
+    animation: wobble 1.5s infinite 1s;
 }
+@keyframes wobble{
+    0% {
+      transform: rotate(0.0deg);
+    }
+    10% {
+      transform: rotate(14.0deg);
+    }
+    20% {
+      transform: rotate(-8.0deg);
+    }
+    30% {
+      transform: rotate(14.0deg);
+    }
+    40% {
+      transform: rotate(-4.0deg);
+    }
+    50% {
+      transform: rotate(10.0deg);
+    }
+    60% {
+      transform: rotate(0.0deg);
+    }
+    100% {
+      transform: rotate(0.0deg);
+    }
+  }
 #home section.spotlight div.left>h1{
     font-size: 78px;
 }
@@ -1238,8 +1265,20 @@ footer section.bottom p{
     #home header a.respnsive{
         display: block;
     }
+    #about section.bottom div.right-container a.button{
+        font-size: 19px;
+    }
+    #about section.bottom div.right-container a.button img{
+        width: 80px;
+    }
 }
 @media all and (max-width: 634px){
+    #about section.bottom div.right-container a.button{
+        font-size: 18px;
+    }
+    #about section.bottom div.right-container a.button img{
+        width: 70px;
+    }
     #services #providings section.bottom{
         width: 85%;
     }
@@ -1346,6 +1385,12 @@ footer section.bottom p{
     #home section.spotlight {
         padding-top: 140px;
     }
+    #about section.bottom div.right-container a.button{
+        font-size: 17px;
+    }
+    #about section.bottom div.right-container a.button img{
+        width: 60px;
+    }
 }
 @media all and (max-width: 480px){
     #home section.spotlight div.left h1.name{
@@ -1385,6 +1430,11 @@ footer section.bottom p{
         padding: 30px;
     }
 }
+@media all and (max-width: 455px){
+    #home section.spotlight div.left h1.name{
+        font-size: 44px;
+    }  
+}
 @media all and (max-width: 440px){
     #home section.spotlight div.left h1.name{
         font-size: 43px;
@@ -1416,6 +1466,13 @@ footer section.bottom p{
     #contacts{
         padding: 40px 20px 80px 20px;
     }
+    #about section.bottom div.right-container a.button{
+        font-size: 16px;
+        padding: 12px 22px;
+    }
+    #about section.bottom div.right-container a.button img{
+        width: 60px;
+    }
 }
 @media all and (max-width: 420px){
     #about section.bottom div.right-container h2{
@@ -1431,6 +1488,12 @@ footer section.bottom p{
     }
     #contacts section.wrapper section.right div.form-container {
         padding: 30px 22px;
+    }
+    #home section.spotlight div.left h1.name{
+        font-size: 41px;
+    }  
+    #home section.spotlight div.left h1.auto-type{
+        font-size: 41px;
     }
 }
 @media all and (max-width: 403px){
@@ -1474,6 +1537,12 @@ footer section.bottom p{
     }
     #home header .drop-down{
         width: 370px;
+    }
+    #home section.spotlight div.left h1.name{
+        font-size: 36px;
+    }  
+    #home section.spotlight div.left h1.auto-type{
+        font-size: 36px;
     }
 }
 @media all and (max-width: 380px){
@@ -1522,6 +1591,14 @@ footer section.bottom p{
         width: 360px;
     }
 }
+@media all and (max-width: 370px){
+    #home section.spotlight div.left h1.name{
+        font-size: 35px;
+    }  
+    #home section.spotlight div.left h1.auto-type{
+        font-size: 34px;
+    }
+}
 @media all and (max-width: 369px){
     #about section.bottom div.right-container h2 {
         font-size: 28px;
@@ -1536,14 +1613,11 @@ footer section.bottom p{
     #home header .drop-down{
         width: 355px;
     }
+    #about section.bottom div.right-container a.button{
+        font-size: 15px;
+    }
 }
 @media all and (max-width: 356px){
-    #home section.spotlight div.left h1.name{
-        font-size: 35px;
-    }  
-    #home section.spotlight div.left h1.auto-type{
-        font-size: 34px;
-    }
     #home section.spotlight div.left p{
         font-size: 18px;
     }
@@ -1552,6 +1626,21 @@ footer section.bottom p{
     }
     #home header .drop-down{
         width: 345px;
+    }
+}
+@media all and (max-width: 350px){
+    #home section.spotlight div.left h1.name{
+        font-size: 33px;
+    }  
+    #home section.spotlight div.left h1.auto-type{
+        font-size: 32px;
+    }
+    #about section.bottom div.right-container a.button{
+        font-size: 15px;
+        padding: 11px 21px;
+    }
+    #about section.bottom div.right-container a.button img{
+        width: 55px;
     }
 }
 @media all and (max-width: 340px){
@@ -1610,10 +1699,10 @@ footer section.bottom p{
 }
 @media all and (max-width: 337px){
     #home section.spotlight div.left h1.name{
-        font-size: 34px;
+        font-size: 33px;
     }  
     #home section.spotlight div.left h1.auto-type{
-        font-size: 33px;
+        font-size: 32px;
     }
     #home section.spotlight div.left p{
         font-size: 18px;
@@ -1624,6 +1713,13 @@ footer section.bottom p{
     }
     #home header .drop-down{
         width: 325px;
+    }
+    #about section.bottom div.right-container a.button{
+        font-size: 14px;
+        padding: 11px 21px;
+    }
+    #about section.bottom div.right-container a.button img{
+        width: 50px;
     }
 }
 @media all and (max-width: 328px){
