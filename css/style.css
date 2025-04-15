@@ -303,8 +303,14 @@ span.typed-cursor{
 #about section.top h1{
     font-size: 60px;
     background: linear-gradient(to right,#fff,#4e4e4e);
+    /* changes */
+    background-clip: text;
+    /* changes */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    /* changes */
+    -webkit-text-stroke: 1px transparent;
+    /* changes */
     text-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
     max-width: 50%;
     margin: 0 auto;
