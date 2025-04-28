@@ -61,9 +61,6 @@ p{
 	font-weight: 500;
 	color: #000;
 }
-.hidden{
-	display:none;
-}
 br.clear {
 	clear: both;
 	line-height: 0;
@@ -105,6 +102,30 @@ span.blur.two{
     width: 250px;
     height: 250px;
     filter: blur(200px);
+}
+/* Our Animation Styles */
+/* Animation Styles */
+.hidden{
+    opacity: 0;
+    transition: all 2s;
+    transform: translateX(5%);
+    filter: blur(10px);
+}
+.show{
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+}
+.hiddentwo{
+    opacity: 0;
+    transition: all 2s;
+    transform: translateX(5%);
+    filter: blur(10px);
+}
+.showtwo{
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
 }
 /* Home Starts */
 #home{
@@ -1528,7 +1549,7 @@ footer section.bottom p{
         background-size: 280px;
     }
     #home header .drop-down{
-        width: 380px;
+        width: 92vw;
     }
     #home header{
         height: 70px;
@@ -1554,7 +1575,7 @@ footer section.bottom p{
         width: 100%;
     }
     #home header .drop-down{
-        width: 370px;
+        width:92vw;
     }
     #home section.spotlight div.left h1.name{
         font-size: 36px;
@@ -1597,7 +1618,7 @@ footer section.bottom p{
         font-size: 18px;
     }
     #home header .drop-down {
-        width: 365px;
+        width: 92vw;
     }
     #services #techstack section.top h1 {
         font-size: 35px;
@@ -1606,7 +1627,7 @@ footer section.bottom p{
         font-size: 20px;
     }
     #home header .drop-down{
-        width: 360px;
+        width: 92vw;
     }
 }
 @media all and (max-width: 370px){
@@ -1629,7 +1650,7 @@ footer section.bottom p{
         font-size: 17px;
     }
     #home header .drop-down{
-        width: 355px;
+        width: 92vw;
     }
     #about section.bottom div.right-container a.button{
         font-size: 15px;
@@ -1643,7 +1664,7 @@ footer section.bottom p{
         font-size: 27px;
     }
     #home header .drop-down{
-        width: 345px;
+        width: 92vw;
     }
 }
 @media all and (max-width: 350px){
@@ -1719,7 +1740,7 @@ footer section.bottom p{
         font-size: 33px;
     }
     #home header .drop-down{
-        width: 335px;
+        width: 92vw;
     }
 }
 @media all and (max-width: 337px){
@@ -1737,7 +1758,7 @@ footer section.bottom p{
         max-width: 94%;
     }
     #home header .drop-down{
-        width: 325px;
+        width: 92vw;
     }
     #about section.bottom div.right-container a.button{
         font-size: 14px;
@@ -1784,7 +1805,7 @@ footer section.bottom p{
         font-size: 16px;
     }
     #home header .drop-down{
-        width: 315px;
+        width: 92vw;
     }
 }
 /* The end */

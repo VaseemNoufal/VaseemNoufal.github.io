@@ -76,16 +76,16 @@
             </header>
             <section class="spotlight">
                 <div class="left">
-                    <div class="line">
+                    <div class="line hidden">
                         <h2>Hey, there</h2>
                         <img src="images/ha.png" alt="ha" class="ha">
                     </div>
-                    <h1 class="name">I'm <span>Vaseem Noufal</span></h1>
-                    <h1 class="auto-type"></h1>
-                    <p>A 13-year-old student interested in technology, coding, and building exciting digital experiences.</p>
+                    <h1 class="name hidden">I'm <span>Vaseem Noufal</span></h1>
+                    <h1 class="auto-type hidden"></h1>
+                    <p class="hidden">A 13-year-old student interested in technology, coding, and building exciting digital experiences.</p>
                     <span class="blur"></span>
                 </div>
-                <div class="right">
+                <div class="right hiddentwo">
                     <div class="container">
                     </div>
                     <span class="blur two"></span>
@@ -96,14 +96,14 @@
     <section id="about">
         <section class="wrapper">
             <section class="top">
-                <span class="abou">About Me</span>
-                <h1 class="beyound">Beyond the Code: My Journey in Tech</h1>
+                <span class="abou hidden">About Me</span>
+                <h1 class="beyound hidden">Beyond the Code: My Journey in Tech</h1>
             </section>
             <section class="bottom">
-                <div class="left-container">
+                <div class="left-container hiddentwo">
                     <img src="images/vse.jpg" alt="Image of Vaseem" class="about-image" />
                 </div>
-                <div class="right-container">
+                <div class="right-container hidden">
                     <h2>Hey, I'm <span>Vaseem Noufal</span></h2>
                     <p>From the moment I wrote my first line of code, I knew technology would be more than just a hobby—it would be my passion. I'm Vaseem Noufal, a 13-year-old frontend developer with a strong love for web development and creative design.</p>
                     <span>Where It All Began</span>
@@ -119,12 +119,12 @@
         <section class="wrapper">
             <section id="providings">
                 <section class="top">
-                    <span class="abou">What I offer?</span>
-                    <h1 class="beyound">Crafting Solutions Tailored to Your Needs</h1>
+                    <span class="abou hidden">What I offer?</span>
+                    <h1 class="beyound hidden">Crafting Solutions Tailored to Your Needs</h1>
                 </section>
                 <section class="bottom">
                     <span class="blur two-two"></span>
-                    <ul>
+                    <ul class="hiddentwo">
                         <li>
                             <div class="title">
                                 <img src="images/code-solid.svg" alt="logo of different proffesions" class="svg-imgs" />
@@ -162,11 +162,11 @@
             </section>
             <section id="techstack">
                 <section class="top">
-                    <span>Softwares</span>
-                    <h1>Tech I use</h1>
+                    <span class="hidden">Softwares</span>
+                    <h1 class="hidden">Tech I use</h1>
                 </section>
                 <section class="bottom">
-                    <div class="grid-container">
+                    <div class="grid-container hidden">
                         <div class="item">
                             <img src="images/photoshop.png" alt="photoshop logo" />
                             <h2>Adobe Photoshop</h2>
@@ -344,6 +344,34 @@
             sidebar.style.display = 'none';
         }
       </script>
+      <script>
+        const observer = new IntersectionObserver((entries) =>{
+          entries.forEach((entry) =>{
+            console.log(entry)
+            if (entry.isIntersecting){
+              entry.target.classList.add('show')
+            } else{
+              entry.target.classList.remove('show')
+            }
+          })
+        })
+        const hiddenElements = document.querySelectorAll('.hidden');
+        hiddenElements.forEach((el) => observer.observe(el));
+       </script>
+       <script>
+        const observertwo = new IntersectionObserver((entries) =>{
+          entries.forEach((entry) =>{
+            console.log(entry)
+            if (entry.isIntersecting){
+              entry.target.classList.add('showtwo')
+            } else{
+              entry.target.classList.remove('showtwo')
+            }
+          })
+        })
+        const hiddenElementstwo = document.querySelectorAll('.hiddentwo');
+        hiddenElementstwo.forEach((el) => observertwo.observe(el));
+       </script>
       <!-- The End -->
 </body>
 </html>
